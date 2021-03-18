@@ -1,0 +1,11 @@
+<main>
+  <ng-container *ngIf="authorised; else loginBtn">
+    <button class="get-me-btn" (click)="handleGetMe()">Get Me</button>
+
+    <div class="details">{{me | json}}</div>
+  </ng-container>
+
+  <ng-template #loginBtn>
+    <button class="login-btn" (click)="handleGitHubLogin()">Login With GitHub</button>
+  </ng-template>
+</main>
